@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
 /* ---------- GLOBAL STYLING ---------- */
@@ -121,11 +122,11 @@ body::selection {
     margin: 0;
 }
 
-/* #content-body {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
+#content-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .navbar-title {
     display: flex;
@@ -948,3 +949,5 @@ body::selection {
 .social-icons a:nth-child(6) i:hover {
     color: #3b5998;
 }
+
+create active on clicking for classes "navbar-menu", "cards", "introduction text" and "social-icons" and give them the same style as current active tab
