@@ -4,6 +4,22 @@ const introduction_text = document.querySelectorAll(".introduction-text");
 const single_profile_card = document.querySelectorAll(".single-profile-card");
 const testimonial_card = document.querySelectorAll(".testimonial-card");
 
+single_profile_card.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        testimonial_card.forEach((testimonialCard, testimonialCardIndex) => {
+            if (index === testimonialCardIndex) {
+                testimonialCard.style.display = "block";
+            } else {
+                testimonialCard.style.display = "none";
+            }
+        });
+        single_profile_card.forEach((cardBtn, cardIndex) => {
+            if (index === cardIndex) {
+                cardBtn.classList.add("profile-card-active");
+            } else {
+                cardBtn.classList.remove("profile-card-active");
+            }
+        });
 design_card_butttons.forEach((button, index) => {
     button.addEventListener("click", () => {
         introduction_text.forEach((introduction, introductionIndex) => {
@@ -23,21 +39,6 @@ design_card_butttons.forEach((button, index) => {
     });
 });
 
-single_profile_card.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        testimonial_card.forEach((testimonialCard, testimonialCardIndex) => {
-            if (index === testimonialCardIndex) {
-                testimonialCard.style.display = "block";
-            } else {
-                testimonialCard.style.display = "none";
-            }
-        });
-        single_profile_card.forEach((cardBtn, cardIndex) => {
-            if (index === cardIndex) {
-                cardBtn.classList.add("profile-card-active");
-            } else {
-                cardBtn.classList.remove("profile-card-active");
-            }
-        });
+
     });
 });
